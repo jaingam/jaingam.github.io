@@ -3,7 +3,7 @@ import Contact from "./Contact"
 
 function About() {
     return (<section id="about" class="snap-proximity snap-y
-    w-full h-dvh px-24 
+    w-full min-h-dvh px-24 
     flex flex-col justify-center ">
         <div class="flex flex-col justify-center gap-y-1.5
         max-w-prose 

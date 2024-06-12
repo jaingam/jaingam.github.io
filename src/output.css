@@ -611,6 +611,15 @@ video {
   height: 100%;
 }
 
+.max-h-max {
+  max-height: -moz-max-content;
+  max-height: max-content;
+}
+
+.min-h-dvh {
+  min-height: 100dvh;
+}
+
 .w-96 {
   width: 24rem;
 }
@@ -732,6 +741,26 @@ video {
 
 .gap-y-4 {
   row-gap: 1rem;
+}
+
+.gap-y-6 {
+  row-gap: 1.5rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.gap-y-12 {
+  row-gap: 3rem;
+}
+
+.gap-y-48 {
+  row-gap: 12rem;
+}
+
+.gap-y-20 {
+  row-gap: 5rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
