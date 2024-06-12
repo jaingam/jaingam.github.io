@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 function Sidebar() {
 
 
-    const [activeMenu, setActiveMenu] = useState(false);
+    const [activeMenu, setActiveMenu] = useState("about");
     const sections = useRef([]);
 
     const handleScroll = () => {
