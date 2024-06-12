@@ -20,4 +20,6 @@ and
 vite build
 </code>
 
+Here's a [guide](https://gist.github.com/cobyism/4730490) on how to deploy a subfolder to GitHub Pages. Thank you.
+
 
