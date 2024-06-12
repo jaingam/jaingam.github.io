@@ -19,14 +19,10 @@ function Sidebar() {
 
             if (scrollY >= sectionOffsetTop && scrollY < sectionOffsetTop + sectionHeight) {
                 currentActiveMenu = section.id;
-                console.log('id: ' + section.id);
             }
-            console.log('sectionoffset: ' + sectionOffsetTop);
-            console.log(scrollY);
         });
 
         setActiveMenu(currentActiveMenu);
-        console.log(currentActiveMenu);
 
     }
 

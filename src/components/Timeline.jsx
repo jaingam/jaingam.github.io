@@ -2,6 +2,7 @@ import TimelineItem from "./TimelineItem";
 
 const experiencesList = [
 {
+    key:3,
     title: "Nicety Nine", position: "Frontend Developer",
     yearStart: "JUL 2023", yearEnd: "PRESENT", content:
         <ul>
@@ -9,13 +10,13 @@ const experiencesList = [
             <li>Developed ARTVenture's webpage with Firebase integration.</li>
             <li>Developing “Happo”, the company’s application that provides personal and organizational mental health services within the Flutter framework.</li>
          </ul>
-},{
+},{ key:2,
     title: "Jump AI", position: "Frontend Developer",
     yearStart: "FEB 2023", yearEnd: "APR 2023", content:
         <ul>
             <li>Designed and developed a job posting webpage with extra functions, basic CRUD, and Line Authentication using Figma and React.js.</li>
          </ul>
-},{
+},{ key:1,
     title: "Sompo Insurance Thailand", position: "Intern",
     yearStart: "JUN 2021", yearEnd: "JUL 2021", content:
         <ul>
@@ -28,7 +29,9 @@ const experiencesList = [
 function Timeline(props) {
     return (<div class="flex flex-col gap-y-4">
         {
-            experiencesList.map(i => <><TimelineItem yearStart={i.yearStart}
+            experiencesList.map(i => <><TimelineItem 
+                key={i.key}
+                yearStart={i.yearStart}
                 yearEnd={i.yearEnd}
                 content={i.content}
                 title={i.title}
