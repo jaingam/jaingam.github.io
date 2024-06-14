@@ -587,18 +587,6 @@ video {
   height: 4rem;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
-.h-28 {
-  height: 7rem;
-}
-
-.h-32 {
-  height: 8rem;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -609,6 +597,11 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .max-h-max {
@@ -739,28 +732,12 @@ video {
   row-gap: 0.5rem;
 }
 
-.gap-y-4 {
-  row-gap: 1rem;
-}
-
-.gap-y-6 {
-  row-gap: 1.5rem;
-}
-
-.gap-y-8 {
-  row-gap: 2rem;
-}
-
-.gap-y-12 {
-  row-gap: 3rem;
-}
-
-.gap-y-48 {
-  row-gap: 12rem;
-}
-
 .gap-y-20 {
   row-gap: 5rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -820,11 +797,6 @@ video {
 .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-10 {
@@ -912,11 +884,6 @@ video {
   color: rgb(2 6 23 / var(--tw-text-opacity));
 }
 
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .invert-0 {
   --tw-invert: invert(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -932,82 +899,59 @@ video {
   transition-duration: 75ms;
 }
 
-/* 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@keyframes selected {
+  0% {
+    width:0px;
+    transform: scalex(0);
+    transform: rotate(0turn);
+    margin-right: 0;
   }
 
-  a:hover {
-    color: #747bff;
+  25% {
+    width:16px;
+    transform: scalex(1);
+    margin-right: 0.5rem;
   }
 
-  button {
-    background-color: #f9f9f9;
+  100% {
+    transform: rotate(1.5turn);
   }
 }
 
-#c {
-  width: 100%;
-  height: 100%;
-  display: block;
+@keyframes unselected {
+  0% {
+    transform: scaleX(1);
+    transform: rotate(1.5turn);
+    width:16px;
+  }
+
+  75% {
+    transform: rotate(0turn);
+    margin-right: 0.5rem;
+  }
+
+  100% {
+    transform: scaleX(0);
+    width:0px;
+    margin-right: 0;
+  }
+}
+
+.sidebar-menu-star-selected {
+  animation: selected 500ms;
+  animation-timing-function: ease-in-out;
+  transform: rotate(1.5turn);
+  transform: scale(1);
+  margin-right: 0.5rem;
+}
+
+.sidebar-menu-star-unselected {
+  animation: unselected 500ms;
+  animation-timing-function: ease-in-out;
+  transform: rotate(0);
+  transform: scaleX(0);
+  width:0px;
+  margin-right: 0rem;
 }
 
 .after\:content-\[\'_\2197\'\]::after {
@@ -1089,11 +1033,6 @@ button:focus-visible {
 
   .dark\:invert {
     --tw-invert: invert(100%);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
-
-  .dark\:invert-0 {
-    --tw-invert: invert(0);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 
