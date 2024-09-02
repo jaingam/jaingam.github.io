@@ -6,15 +6,15 @@ const experiencesList = [
     title: "Nicety Nine", position: "Frontend Developer",
     yearStart: "JUL 2023", yearEnd: "PRESENT", content:
         <ul>
-            <li>Developed <a class="text-blue-600 after:content-['_↗']" href="https://nicetynine.com">Nicety Nine's webpage</a>.</li>
-            <li>Developed ARTVenture's webpage with Firebase integration.</li>
+            <li>Built <a class="text-blue-600 after:content-['_↗']" href="https://nicetynine.com">Nicety Nine's webpage</a>.</li>
+            <li>Created ARTVenture's webpage with Firebase integration.</li>
             <li>Developing “Happo”, the company’s application that provides personal and organizational mental health services within the Flutter framework.</li>
          </ul>
 },{ key:2,
     title: "Jump AI", position: "Frontend Developer",
     yearStart: "FEB 2023", yearEnd: "APR 2023", content:
         <ul>
-            <li>Designed and developed a job posting webpage with extra functions, basic CRUD, and Line Authentication using Figma and React.js.</li>
+            <li>Designed and implemented a job posting webpage with extra functions, basic CRUD, and Line Authentication using Figma and React.js.</li>
          </ul>
 },{ key:1,
     title: "Sompo Insurance Thailand", position: "Intern",
