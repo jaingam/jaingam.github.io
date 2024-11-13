@@ -22,7 +22,7 @@ jobs:
           # Child repository to sync the subtree to (eg. owner/repository.)
           repo: 'jaingam/jaingam.github.io'
           # Path prefix in parent repo to split into child subtree (eg. src/PackageName.)
-          path: '/dist'
+          path: 'dist'
           # Deployment SSH key for pushing to child repo (checkout out deployment tokens for single repos or bot accounts for multi-repos/orgs.)
           deploy_key: ${{secrets.GIT_SUBPAGE_ACTION_KEY}}
           force: true
