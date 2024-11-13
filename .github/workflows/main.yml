@@ -14,7 +14,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ssh-key: ${{ secrets.GIT_SUBPAGE_ACTION_KEY }}
       
       - name: Subtree
         run: git subtree push --prefix dist origin gh-pages
