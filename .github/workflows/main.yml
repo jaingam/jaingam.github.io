@@ -1,0 +1,31 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Git Subtree Push
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: nxtlvlsoftware/git-subtree
+        # You may pin to the exact commit or the version.
+        # uses: NxtLvLSoftware/git-subtree-action@3d555981a570a2275a91c07b04b38d5e90d48c05
+        uses: NxtLvLSoftware/git-subtree-action@1.1
+        with:
+          # Child repository to sync the subtree to (eg. owner/repository.)
+          repo: jaingam/jaingam.github.io
+          # Path prefix in parent repo to split into child subtree (eg. src/PackageName.)
+          path: /dist
+          # Deployment SSH key for pushing to child repo (checkout out deployment tokens for single repos or bot accounts for multi-repos/orgs.)
+          deploy_key: ${{secrets.GIT_SUBPAGE_ACTION_KEY}}
+          force: true
+          # Branch of child subtree repository (default is branch or tag ref that triggered the workflow.)
+          branch: gh-pages
+          
