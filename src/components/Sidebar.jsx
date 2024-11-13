@@ -35,7 +35,7 @@ function Sidebar() {
         };
     }, []);
 
-    return (<div class="
+    return (<div className="
     w-96 h-dvh
     hidden md:flex flex-col
     
@@ -47,21 +47,21 @@ function Sidebar() {
     
     text-xl font-light
     ">
-        <div class="flex w-full flex-col justify-start">
-            <a class={(activeMenu === 'about') ?
+        <div className="flex w-full flex-col justify-start">
+            <a className={(activeMenu === 'about') ?
                 'sidebar-menu flex flex-row h-16 w-full pl-12 content-center items-center text-slate-900 dark:text-slate-50 transition-colors' :
                 'sidebar-menu flex flex-row h-16 w-full pl-12 content-center items-center text-slate-600 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors'
             } href='#about'>
-                <img class={(activeMenu === 'about') ? "sidebar-menu-star-selected h-max":"sidebar-menu-star-unselected h-max"} src="https://cdn-icons-png.flaticon.com/512/4510/4510931.png " width="16" height="16"></img> About
+                <img className={(activeMenu === 'about') ? "sidebar-menu-star-selected h-max":"sidebar-menu-star-unselected h-max"} src="https://cdn-icons-png.flaticon.com/512/4510/4510931.png " width="16" height="16"></img> About
 
                 </a>
 
-            <a class={(activeMenu === 'experience') ?
+            <a className={(activeMenu === 'experience') ?
                    'sidebar-menu flex flex-row h-16 w-full pl-12 content-center items-center text-slate-900 dark:text-slate-50 transition-colors' :
                    'sidebar-menu flex flex-row h-16 w-full pl-12 content-center items-center text-slate-600 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors'
                 } href='#experience'>
-                <img class={(activeMenu === 'experience') ? "sidebar-menu-star-selected h-max":"sidebar-menu-star-unselected h-max"} src="https://cdn-icons-png.flaticon.com/512/4510/4510931.png " width="16" height="16"></img> Experience</a>
-            {/* <a class={(activeMenu === 'contact') ?
+                <img className={(activeMenu === 'experience') ? "sidebar-menu-star-selected h-max":"sidebar-menu-star-unselected h-max"} src="https://cdn-icons-png.flaticon.com/512/4510/4510931.png " width="16" height="16"></img> Experience</a>
+            {/* <a className={(activeMenu === 'contact') ?
                 'sidebar-menu h-16 w-full pl-8 content-center bg-slate-400 hover:text-slate-900  dark:bg-slate-600 transition-colors' :
                 'sidebar-menu h-16 w-full pl-8 content-center hover:bg-slate-300 hover:text-slate-900 dark:hover:bg-slate-700 transition-colors'
                 } href='#contact'>Contact</a> */}
