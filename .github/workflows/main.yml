@@ -8,13 +8,4 @@ on:
 
 jobs:
   subtree:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Subtree
-        run: git subtree push --prefix dist origin gh-pages
-          
+    uses: jaingam/git-subtree-to-branch@v0.0.1
