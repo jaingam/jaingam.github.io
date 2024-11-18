@@ -1,14 +1,18 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Git Subtree Push
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    paths:
-      - "${{inputs.build_folder}}"
 
 jobs:
   subtree:
-    uses: jaingam/git-subtree-to-branch@v0.0.3
-          
-          
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Subtree
+        run: git subtree push --prefix dist origin gh-pages
