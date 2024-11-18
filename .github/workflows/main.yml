@@ -2,10 +2,13 @@
 name: Git Subtree Push
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    paths:
+      - "${{inputs.build_folder}}"
 
 jobs:
   subtree:
-    uses: jaingam/git-subtree-to-branch@v0.0.1
+    uses: jaingam/git-subtree-to-branch@v0.0.3
+          
+          
